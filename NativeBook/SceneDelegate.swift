@@ -12,7 +12,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let window = UIWindow(windowScene: windowScene)
         
-        let vc = BookViewController(storySets: [UILabelStorySet(), UIButtonStorySet()])
+        let vc = BookViewController(storySets: [
+            UILabelStorySet(),
+            UIButtonStorySet(),
+            UITextFieldStorySet()
+        ])
         let nc = UINavigationController(rootViewController: vc)
         window.rootViewController = nc
 

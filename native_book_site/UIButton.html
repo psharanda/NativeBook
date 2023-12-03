@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>UIButton</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/xcode.min.css"
+    />
+    <style>
+      table {
+        width: 100%;
+        border: 1px solid #555;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+
+      td {
+        padding: 5px;
+        border: 1px solid #555;
+        overflow: hidden;
+        background: #f0f0f0;
+        word-wrap: break-word;
+      }
+
+      td:first-child {
+        text-align: center;
+        width: 395px;
+      }
+    </style>
+    <script>
+      hljs.initHighlightingOnLoad();
+
+      function setMode(mode) {
+        for (const element of document.getElementsByClassName("snapshot")) {
+          element.srcset = element.srcset.replace(
+            /__[a-z]*@/g,
+            "__" + mode + "@"
+          );
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <a href="index.html">Index</a>
+    <p>
+      <a href="javascript:setMode('default')">Default</a> |
+      <a href="javascript:setMode('xs')">XS</a> |
+      <a href="javascript:setMode('m')">M</a> |
+      <a href="javascript:setMode('xl')">XL</a> |
+      <a href="javascript:setMode('xxxl')">XXXL</a> |
+      <a href="javascript:setMode('dark')">Dark Mode</a> |
+      <a href="javascript:setMode('rtl')">Right-To-Left</a>
+    </p>
+    <h1>UIButton</h1>
+    <h2>Snippets</h2>
+        <h3>BasicButton</h3>
+    <table>
+      <table>
+        <tr>
+          <td>
+            <img
+              class="snapshot"
+              srcset="../Ref/ReferenceImages_64/NativeBookTests.UIButton_Tests/test_snippet_BasicButton__default@3x.png 3x "
+            />
+          </td>
+          <td>
+            <pre><code class="swift">let button = UIButton()
+var config = UIButton.Configuration.plain()
+config.title = "Basic"
+button.configuration = config</code></pre>
+          </td>
+        </tr>
+      </table>
+    </table>
+        <h3>RoundedCornerButton</h3>
+    <table>
+      <table>
+        <tr>
+          <td>
+            <img
+              class="snapshot"
+              srcset="../Ref/ReferenceImages_64/NativeBookTests.UIButton_Tests/test_snippet_RoundedCornerButton__default@3x.png 3x "
+            />
+          </td>
+          <td>
+            <pre><code class="swift">let button = UIButton()
+var config = UIButton.Configuration.filled()
+config.title = "Rounded"
+config.cornerStyle = .medium
+button.configuration = config</code></pre>
+          </td>
+        </tr>
+      </table>
+    </table>
+        <h3>LightDarkRoundedCornerButton</h3>
+    <table>
+      <table>
+        <tr>
+          <td>
+            <img
+              class="snapshot"
+              srcset="../Ref/ReferenceImages_64/NativeBookTests.UIButton_Tests/test_snippet_LightDarkRoundedCornerButton__default@3x.png 3x "
+            />
+          </td>
+          <td>
+            <pre><code class="swift">let button = UIButton()
+var config = UIButton.Configuration.filled()
+config.title = "Rounded"
+config.baseBackgroundColor = .tertiarySystemBackground
+config.baseForegroundColor = .label
+config.cornerStyle = .medium
+button.configuration = config</code></pre>
+          </td>
+        </tr>
+      </table>
+    </table>
+        <h3>IconButton</h3>
+    <table>
+      <table>
+        <tr>
+          <td>
+            <img
+              class="snapshot"
+              srcset="../Ref/ReferenceImages_64/NativeBookTests.UIButton_Tests/test_snippet_IconButton__default@3x.png 3x "
+            />
+          </td>
+          <td>
+            <pre><code class="swift">let button = UIButton()
+var config = UIButton.Configuration.tinted()
+config.image = UIImage(systemName: "star")
+config.imagePlacement = .leading
+config.imagePadding = 10
+button.configuration = config</code></pre>
+          </td>
+        </tr>
+      </table>
+    </table>
+        <h3>OutlineButton</h3>
+    <table>
+      <table>
+        <tr>
+          <td>
+            <img
+              class="snapshot"
+              srcset="../Ref/ReferenceImages_64/NativeBookTests.UIButton_Tests/test_snippet_OutlineButton__default@3x.png 3x "
+            />
+          </td>
+          <td>
+            <pre><code class="swift">let button = UIButton()
+var config = UIButton.Configuration.gray()
+config.title = "Outline"
+config.baseForegroundColor = .blue
+config.buttonSize = .large
+button.configuration = config</code></pre>
+          </td>
+        </tr>
+      </table>
+    </table>
+        <h3>ImageTitleButton</h3>
+    <table>
+      <table>
+        <tr>
+          <td>
+            <img
+              class="snapshot"
+              srcset="../Ref/ReferenceImages_64/NativeBookTests.UIButton_Tests/test_snippet_ImageTitleButton__default@3x.png 3x "
+            />
+          </td>
+          <td>
+            <pre><code class="swift">let button = UIButton()
+var config = UIButton.Configuration.plain()
+config.title = "Image + Title"
+config.image = UIImage(systemName: "bell")
+config.imagePlacement = .top
+config.titlePadding = 10
+button.configuration = config</code></pre>
+          </td>
+        </tr>
+      </table>
+    </table>
+      </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>UILabel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/xcode.min.css"
+    />
+    <style>
+      table {
+        width: 100%;
+        border: 1px solid #555;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+
+      td {
+        padding: 5px;
+        border: 1px solid #555;
+        overflow: hidden;
+        background: #f0f0f0;
+        word-wrap: break-word;
+      }
+
+      td:first-child {
+        text-align: center;
+        width: 395px;
+      }
+    </style>
+    <script>
+      hljs.initHighlightingOnLoad();
+
+      function setMode(mode) {
+        for (const element of document.getElementsByClassName("snapshot")) {
+          element.srcset = element.srcset.replace(
+            /__[a-z]*@/g,
+            "__" + mode + "@"
+          );
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <a href="index.html">Index</a>
+    <p>
+      <a href="javascript:setMode('default')">Default</a> |
+      <a href="javascript:setMode('xs')">XS</a> |
+      <a href="javascript:setMode('m')">M</a> |
+      <a href="javascript:setMode('xl')">XL</a> |
+      <a href="javascript:setMode('xxxl')">XXXL</a> |
+      <a href="javascript:setMode('dark')">Dark Mode</a> |
+      <a href="javascript:setMode('rtl')">Right-To-Left</a>
+    </p>
+    <h1>UILabel</h1>
+    <h2>Snippets</h2>
+        <h3>BasicLabel</h3>
+    <table>
+      <table>
+        <tr>
+          <td>
+            <img
+              class="snapshot"
+              srcset="../Ref/ReferenceImages_64/NativeBookTests.UILabel_Tests/test_snippet_BasicLabel__default@3x.png 3x "
+            />
+          </td>
+          <td>
+            <pre><code class="swift">let label = UILabel()
+label.text = "Hello World"
+label.font = .preferredFont(forTextStyle: .body)
+label.adjustsFontForContentSizeCategory = true
+label.backgroundColor = .systemBackground</code></pre>
+          </td>
+        </tr>
+      </table>
+    </table>
+        <h3>FixedWidthLabel</h3>
+    <table>
+      <table>
+        <tr>
+          <td>
+            <img
+              class="snapshot"
+              srcset="../Ref/ReferenceImages_64/NativeBookTests.UILabel_Tests/test_snippet_FixedWidthLabel__default@3x.png 3x "
+            />
+          </td>
+          <td>
+            <pre><code class="swift">let label = UILabel()
+label.text = "Lorem Ipsum"
+label.font = .preferredFont(forTextStyle: .body)
+label.adjustsFontForContentSizeCategory = true
+label.backgroundColor = .systemBackground
+
+label.widthAnchor.constraint(equalToConstant: 120).isActive = true</code></pre>
+          </td>
+        </tr>
+      </table>
+    </table>
+      </body>
+</html>

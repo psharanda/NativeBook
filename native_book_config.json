@@ -9,6 +9,11 @@
             "name": "UIButton",
             "storySetFile": "NativeBook/StorySets/UIButtonStorySet.swift",
             "snapshotsFolder": "Ref/ReferenceImages_64/NativeBookTests.UIButton_Tests"
+        },
+        {
+            "name": "UITextField",
+            "storySetFile": "NativeBook/StorySets/UITextFieldStorySet.swift",
+            "snapshotsFolder": "Ref/ReferenceImages_64/NativeBookTests.UITextField_Tests"
         }
     ]
 }

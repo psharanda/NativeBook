@@ -10,26 +10,24 @@ class UILabelStorySet: StorySet {
         return "UILabel"
     }
     
-    @objc func snippet_Primary() -> UIView {
+    @objc func snippet_BasicLabel() -> UIView {
         let label = UILabel()
-        label.text = "Primary"
+        label.text = "Hello World"
         label.font = .preferredFont(forTextStyle: .body)
         label.adjustsFontForContentSizeCategory = true
         label.backgroundColor = .systemBackground
-        
-        label.widthAnchor.constraint(equalToConstant: 100).isActive = true
         
         return label
     }
     
-    @objc func snippet_Secondary() -> UIView {
+    @objc func snippet_FixedWidthLabel() -> UIView {
         let label = UILabel()
-        label.text = "Secondary"
+        label.text = "Lorem Ipsum"
         label.font = .preferredFont(forTextStyle: .body)
         label.adjustsFontForContentSizeCategory = true
         label.backgroundColor = .systemBackground
         
-        label.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        label.widthAnchor.constraint(equalToConstant: 120).isActive = true
         
         return label
     }
