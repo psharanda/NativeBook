@@ -1,0 +1,14 @@
+{
+    "components": [
+        {
+            "name": "UILabel",
+            "storySetFile": "NativeBook/StorySets/UILabelStorySet.swift",
+            "snapshotsFolder": "Ref/ReferenceImages_64/NativeBookTests.UILabel_Tests"
+        },
+        {
+            "name": "UIButton",
+            "storySetFile": "NativeBook/StorySets/UIButtonStorySet.swift",
+            "snapshotsFolder": "Ref/ReferenceImages_64/NativeBookTests.UIButton_Tests"
+        }
+    ]
+}

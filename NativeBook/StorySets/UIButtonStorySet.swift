@@ -69,15 +69,6 @@ class UIButtonStorySet: StorySet {
         return button
     }
 
-    @objc func snippet_BadgeButton() -> UIView {
-        let button = UIButton()
-        var config = UIButton.Configuration.filled()
-        config.title = "Badge"
-        config.showsActivityIndicator = true
-        button.configuration = config
-        return button
-    }
-
     @objc func snippet_ShadowButton() -> UIView {
         let button = UIButton()
         var config = UIButton.Configuration.tinted()

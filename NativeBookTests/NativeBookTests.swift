@@ -79,23 +79,15 @@ class NativeBookSnapshotTestCase: FBSnapshotTestCase {
 }
 
 final class UILabel_Tests: NativeBookSnapshotTestCase {
-    override func setUp() {
-        super.setUp()
-        recordMode = true
-    }
-
     func test() {
+        //recordMode = true
         runSnippetTests(for: UILabelStorySet())
     }
 }
 
 final class UIButton_Tests: NativeBookSnapshotTestCase {
-    override func setUp() {
-        super.setUp()
-        recordMode = true
-    }
-
     func test() {
+        //recordMode = true
         runSnippetTests(for: UIButtonStorySet())
     }
 }
