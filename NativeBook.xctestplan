@@ -1,0 +1,39 @@
+{
+  "configurations" : [
+    {
+      "id" : "C7479585-2C92-420D-A6D7-DADE5B4674D9",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "environmentVariableEntries" : [
+      {
+        "key" : "IMAGE_DIFF_DIR",
+        "value" : "$(SOURCE_ROOT)\/Ref\/FailureDiffs"
+      },
+      {
+        "key" : "FB_REFERENCE_IMAGE_DIR",
+        "value" : "$(SOURCE_ROOT)\/Ref\/ReferenceImages"
+      }
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:NativeBook.xcodeproj",
+      "identifier" : "1BDD34842B1BC3A300B19632",
+      "name" : "NativeBook"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:NativeBook.xcodeproj",
+        "identifier" : "1BDD349A2B1BC3A500B19632",
+        "name" : "NativeBookTests"
+      }
+    }
+  ],
+  "version" : 1
+}
