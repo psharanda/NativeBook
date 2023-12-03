@@ -10,9 +10,23 @@ import iOSSnapshotTestCase
 @testable import NativeBook
 
 
-public extension FBSnapshotTestCase {
+class NativeBookSnapshotTestCase: FBSnapshotTestCase {
+    override func setUp() {
+        super.setUp()
+        usesDrawViewHierarchyInRect = true
+    }
     
-    func NativeBookVerifyView(_ view: UIView, suffixes: NSOrderedSet = FBSnapshotTestCaseDefaultSuffixes(), perPixelTolerance: CGFloat = 0, overallTolerance: CGFloat = 0, file: StaticString = #file, line: UInt = #line) {
+    func runSnippetTests(for storySet: StorySet) {
+        let snippetSelectors = storySet.snippetSelectors
+        for selector in snippetSelectors {
+            let result = storySet.perform(selector)
+            if let view = result?.takeUnretainedValue() as? UIView {
+                NativeBookVerifyView(view, storyName: NSStringFromSelector(selector))
+            }
+        }
+    }
+    
+    private func NativeBookVerifyView(_ view: UIView, storyName: String) {
         
         let window = UIApplication
             .shared
@@ -44,44 +58,45 @@ public extension FBSnapshotTestCase {
         for (category, categoryName) in contentSizeCategories {
             view.traitOverrides.preferredContentSizeCategory = category
             window.layoutIfNeeded()
-            FBSnapshotVerifyView(view, identifier: categoryName, suffixes: suffixes, perPixelTolerance: perPixelTolerance, overallTolerance: overallTolerance, file: file, line: line)
+            FBSnapshotVerifyView(view, identifier: storyName + "__" + categoryName)
         }
         
         view.traitOverrides.preferredContentSizeCategory = .large
         
         view.traitOverrides.userInterfaceStyle = .dark
         window.layoutIfNeeded()
-        FBSnapshotVerifyView(view, identifier: "dark", suffixes: suffixes, perPixelTolerance: perPixelTolerance, overallTolerance: overallTolerance, file: file, line: line)
+        FBSnapshotVerifyView(view, identifier: storyName + "__dark")
         
         
         view.traitOverrides.layoutDirection = .rightToLeft
         view.semanticContentAttribute = .forceRightToLeft
         view.traitOverrides.userInterfaceStyle = .light
         window.layoutIfNeeded()
-        FBSnapshotVerifyView(view, identifier: "rtl", suffixes: suffixes, perPixelTolerance: perPixelTolerance, overallTolerance: overallTolerance, file: file, line: line)
+        FBSnapshotVerifyView(view, identifier: storyName + "__rtl")
 
+        view.removeFromSuperview()
     }
 }
 
-
-final class NativeBook_UIButton_Tests: FBSnapshotTestCase {
-
+final class UILabel_Tests: NativeBookSnapshotTestCase {
     override func setUp() {
         super.setUp()
-        usesDrawViewHierarchyInRect = true
         recordMode = true
     }
 
-    func test_primary() {
-        let label = UILabel()
-        label.text = "Hello World"
-        label.font = .preferredFont(forTextStyle: .body)
-        label.adjustsFontForContentSizeCategory = true
-        label.backgroundColor = .systemBackground
-        
-        label.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        
-        NativeBookVerifyView(label)
+    func test() {
+        runSnippetTests(for: UILabelStorySet())
+    }
+}
+
+final class UIButton_Tests: NativeBookSnapshotTestCase {
+    override func setUp() {
+        super.setUp()
+        recordMode = true
+    }
+
+    func test() {
+        runSnippetTests(for: UIButtonStorySet())
     }
 }
 
