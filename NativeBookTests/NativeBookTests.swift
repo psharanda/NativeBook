@@ -69,16 +69,7 @@ class NativeBookSnapshotTestCase: FBSnapshotTestCase {
         
         
         view.traitOverrides.layoutDirection = .rightToLeft
-        
-        func rec(v: UIView) {
-            v.semanticContentAttribute = .forceRightToLeft
-            v.subviews.forEach {
-                rec(v: $0)
-            }
-        }
-        
-        rec(v: view)
-        
+        view.semanticContentAttribute = .forceRightToLeft
         view.traitOverrides.userInterfaceStyle = .light
         window.layoutIfNeeded()
         FBSnapshotVerifyView(view, identifier: storyName + "__rtl")
