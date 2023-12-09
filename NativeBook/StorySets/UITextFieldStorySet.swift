@@ -10,7 +10,7 @@ class UITextFieldStorySet: StorySet {
         return "UITextField"
     }
     
-    @objc func snippet_BasicTextFieldWithPlaceholder() -> UIView {
+    @objc func story_BasicTextFieldWithPlaceholder() -> UIView {
         let textField = UITextField()
         textField.placeholder = "Placeholder"
         textField.borderStyle = .roundedRect
@@ -19,7 +19,7 @@ class UITextFieldStorySet: StorySet {
         return textField
     }
     
-    @objc func snippet_BasicTextFieldWithText() -> UIView {
+    @objc func story_BasicTextFieldWithText() -> UIView {
         let textField = UITextField()
         textField.text = "Text"
         textField.borderStyle = .roundedRect
@@ -28,7 +28,7 @@ class UITextFieldStorySet: StorySet {
         return textField
     }
     
-    @objc func snippet_DynamicTypeTextFieldWithPlaceholder() -> UIView {
+    @objc func story_DynamicTypeTextFieldWithPlaceholder() -> UIView {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
         textField.placeholder = "Placeholder"
@@ -40,7 +40,7 @@ class UITextFieldStorySet: StorySet {
         return textField
     }
     
-    @objc func snippet_DynamicTypeBasicTextFieldWithText() -> UIView {
+    @objc func story_DynamicTypeBasicTextFieldWithText() -> UIView {
         let textField = UITextField()
         textField.text = "Text"
         textField.borderStyle = .roundedRect

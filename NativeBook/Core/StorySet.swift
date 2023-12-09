@@ -14,15 +14,15 @@ public class StorySet: NSObject {
         return NSStringFromClass(type(of: self)).replacingOccurrences(of: "StorySet", with: "")
     }
     
-    private var _cachedSnippetSelectors: [Selector]?
+    private var _cachedStories: [Selector]?
     
-    public var snippetSelectors: [Selector] {
-        let result = _cachedSnippetSelectors ?? getAllSnippetSelectors()
-        _cachedSnippetSelectors = result
+    public var stories: [Selector] {
+        let result = _cachedStories ?? getStorySelectors()
+        _cachedStories = result
         return result
     }
     
-    private func getAllSnippetSelectors() -> [Selector] {
+    private func getStorySelectors() -> [Selector] {
         var methodCount: UInt32 = 0
         
         guard let methodList = class_copyMethodList(type(of: self), &methodCount) else { return [] }
@@ -31,7 +31,7 @@ public class StorySet: NSObject {
         for i in 0..<Int(methodCount) {
             let selector = method_getName(methodList[i])
             let name = NSStringFromSelector(selector)
-            if name.starts(with: "snippet_") {
+            if name.starts(with: "story_") {
                 selectors.append(selector)
             }
         }

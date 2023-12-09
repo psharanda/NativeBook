@@ -10,7 +10,7 @@ class UILabelStorySet: StorySet {
         return "UILabel"
     }
     
-    @objc func snippet_BasicLabel() -> UIView {
+    @objc func story_BasicLabel() -> UIView {
         let label = UILabel()
         label.text = "Hello World"
         label.font = .preferredFont(forTextStyle: .body)
@@ -20,7 +20,7 @@ class UILabelStorySet: StorySet {
         return label
     }
     
-    @objc func snippet_FixedWidthLabel() -> UIView {
+    @objc func story_FixedWidthLabel() -> UIView {
         let label = UILabel()
         label.text = "Lorem Ipsum"
         label.font = .preferredFont(forTextStyle: .body)

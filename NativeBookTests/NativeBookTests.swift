@@ -16,9 +16,9 @@ class NativeBookSnapshotTestCase: FBSnapshotTestCase {
         usesDrawViewHierarchyInRect = true
     }
     
-    func runSnippetTests(for storySet: StorySet) {
-        let snippetSelectors = storySet.snippetSelectors
-        for selector in snippetSelectors {
+    func runTests(for storySet: StorySet) {
+        let stories = storySet.stories
+        for selector in stories {
             let result = storySet.perform(selector)
             if let view = result?.takeUnretainedValue() as? UIView {
                 NativeBookVerifyView(view, storyName: NSStringFromSelector(selector))
@@ -81,21 +81,21 @@ class NativeBookSnapshotTestCase: FBSnapshotTestCase {
 final class UILabel_Tests: NativeBookSnapshotTestCase {
     func test() {
         //recordMode = true
-        runSnippetTests(for: UILabelStorySet())
+        runTests(for: UILabelStorySet())
     }
 }
 
 final class UIButton_Tests: NativeBookSnapshotTestCase {
     func test() {
         //recordMode = true
-        runSnippetTests(for: UIButtonStorySet())
+        runTests(for: UIButtonStorySet())
     }
 }
 
 final class UITextField_Tests: NativeBookSnapshotTestCase {
     func test() {
         //recordMode = true
-        runSnippetTests(for: UITextFieldStorySet())
+        runTests(for: UITextFieldStorySet())
     }
 }
 

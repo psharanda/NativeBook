@@ -59,7 +59,7 @@
       <a href="javascript:setMode('rtl')">Right-To-Left</a>
     </p>
     <h1><%- component.name %></h1>
-    <h2>Snippets</h2>
+    <h2>Stories</h2>
     <% component.stories.forEach(function(story){ _%>
     <h3><%- story.name %></h3>
     <table>
@@ -68,11 +68,11 @@
           <td>
             <img
               class="snapshot"
-              srcset="<%- `../${component.snapshotsFolder}/test_snippet_${story.name}__default@3x.png 3x ` %>"
+              srcset="<%- `../${component.snapshotsFolder}/test_story_${story.name}__default@3x.png 3x ` %>"
             />
           </td>
           <td>
-            <pre><code class="swift"><%- story.snippet %></code></pre>
+            <pre><code class="swift"><%- story.codeSnippet %></code></pre>
           </td>
         </tr>
       </table>

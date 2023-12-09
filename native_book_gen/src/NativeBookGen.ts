@@ -10,7 +10,7 @@ interface Config {
 
 interface Story {
   name: string;
-  snippet: string;
+  codeSnippet: string;
 }
 
 interface Component {
@@ -43,20 +43,18 @@ function formatMultilineString(input: string): string {
   return lines.join("\n");
 }
 
-function snippetsFromFile(
-  filePath: string
-): { name: string; snippet: string }[] {
+function storiesFromFile(filePath: string): Story[] {
   const sourceCode = fs.readFileSync(repoRoot + filePath, "utf-8");
 
-  const snippetRegex =
-    /@objc\s+func\s+snippet_(?<name>[A-Za-z0-9_]+)\(\)\s*->\s*UIView\s*{(?<snippet>[\s\S]*?)return/g;
+  const codeSnippetRegex =
+    /@objc\s+func\s+story_(?<name>[A-Za-z0-9_]+)\(\)\s*->\s*UIView\s*{(?<codeSnippet>[\s\S]*?)return/g;
 
-  const result: { name: string; snippet: string }[] = [];
+  const result: Story[] = [];
   let match;
-  while ((match = snippetRegex.exec(sourceCode)) !== null && match.groups) {
+  while ((match = codeSnippetRegex.exec(sourceCode)) !== null && match.groups) {
     result.push({
       name: match.groups["name"],
-      snippet: formatMultilineString(match.groups["snippet"]),
+      codeSnippet: formatMultilineString(match.groups["codeSnippet"]),
     });
   }
 
@@ -99,22 +97,11 @@ function renderComponent(component: Component) {
   // gather information for a component
   const components: Component[] = [];
   for (const componentJson of config.components) {
-    const component: Component = {
+    components.push({
       name: componentJson.name,
-      stories: [],
+      stories: storiesFromFile(componentJson.storySetFile),
       snapshotsFolder: componentJson.snapshotsFolder,
-    };
-    // extract code snippets for a component
-    const snippets = snippetsFromFile(componentJson.storySetFile);
-
-    for (const snippet of snippets) {
-      component.stories.push({
-        name: snippet.name,
-        snippet: snippet.snippet,
-      });
-    }
-
-    components.push(component);
+    });
   }
 
   // prepare site folder

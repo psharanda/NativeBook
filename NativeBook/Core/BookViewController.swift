@@ -23,7 +23,7 @@ public class BookViewController: UITableViewController {
     }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return storySets[section].snippetSelectors.count
+        return storySets[section].stories.count
     }
     
     public override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -37,7 +37,7 @@ public class BookViewController: UITableViewController {
     }
     
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selector = storySets[indexPath.section].snippetSelectors[indexPath.row]
+        let selector = storySets[indexPath.section].stories[indexPath.row]
         let storySet = storySets[indexPath.section]
         
         let storyViewController = StoryViewController(storySet: storySet, selector: selector)
@@ -47,8 +47,8 @@ public class BookViewController: UITableViewController {
     }
     
     private func rowTitle(for indexPath: IndexPath) -> String {
-        let selector = storySets[indexPath.section].snippetSelectors[indexPath.row]
-        return NSStringFromSelector(selector).replacingOccurrences(of: "snippet_", with: "")
+        let selector = storySets[indexPath.section].stories[indexPath.row]
+        return NSStringFromSelector(selector).replacingOccurrences(of: "story_", with: "")
     }
 }
 
