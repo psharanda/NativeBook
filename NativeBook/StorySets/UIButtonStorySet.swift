@@ -5,11 +5,6 @@
 import UIKit
 
 class UIButtonStorySet: StorySet {
-
-    override var name: String {
-        return "UIButton"
-    }
-    
     @objc func story_BasicButton() -> UIView {
         let button = UIButton()
         var config = UIButton.Configuration.plain()

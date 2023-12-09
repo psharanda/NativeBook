@@ -35,11 +35,7 @@ public class StoryViewController: UIViewController {
         storyView.translatesAutoresizingMaskIntoConstraints = false
         let constraints = [
             storyView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            storyView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            storyView.topAnchor.constraint(greaterThanOrEqualTo: view.topAnchor),
-            storyView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor),
-            storyView.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor),
-            storyView.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor)
+            storyView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ]
         
         NSLayoutConstraint.activate(constraints)

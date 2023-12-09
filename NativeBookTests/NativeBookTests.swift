@@ -28,21 +28,14 @@ class NativeBookSnapshotTestCase: FBSnapshotTestCase {
     
     private func NativeBookVerifyView(_ view: UIView, storyName: String) {
         
-        let window = UIApplication
-            .shared
-            .connectedScenes
-            .compactMap { ($0 as? UIWindowScene)?.keyWindow }
-            .last!
+        let window = UIApplication.shared.connectedScenes
+            .compactMap { ($0 as? UIWindowScene)?.keyWindow }.last!
         window.addSubview(view)
         
         view.translatesAutoresizingMaskIntoConstraints = false
         let constraints = [
             view.centerXAnchor.constraint(equalTo: window.centerXAnchor),
-            view.centerYAnchor.constraint(equalTo: window.centerYAnchor),
-            view.topAnchor.constraint(greaterThanOrEqualTo: window.topAnchor),
-            view.bottomAnchor.constraint(lessThanOrEqualTo: window.bottomAnchor),
-            view.leadingAnchor.constraint(greaterThanOrEqualTo: window.leadingAnchor),
-            view.trailingAnchor.constraint(lessThanOrEqualTo: window.trailingAnchor)
+            view.centerYAnchor.constraint(equalTo: window.centerYAnchor)
         ]
         
         NSLayoutConstraint.activate(constraints)

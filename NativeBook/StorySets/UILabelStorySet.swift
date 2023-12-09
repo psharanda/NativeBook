@@ -4,12 +4,7 @@
 
 import UIKit
 
-class UILabelStorySet: StorySet {
-    
-    override var name: String {
-        return "UILabel"
-    }
-    
+class UILabelStorySet: StorySet {    
     @objc func story_BasicLabel() -> UIView {
         let label = UILabel()
         label.text = "Hello World"

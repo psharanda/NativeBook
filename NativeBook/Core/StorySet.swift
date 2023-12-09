@@ -11,15 +11,21 @@ import UIKit
 public class StorySet: NSObject {
     
     public var name: String {
-        return NSStringFromClass(type(of: self)).replacingOccurrences(of: "StorySet", with: "")
+        return NSStringFromClass(type(of: self))
+            .split(separator: ".").last!
+            .replacingOccurrences(of: "StorySet", with: "")
     }
     
     private var _cachedStories: [Selector]?
     
     public var stories: [Selector] {
-        let result = _cachedStories ?? getStorySelectors()
-        _cachedStories = result
-        return result
+        if let result = _cachedStories {
+            return result
+        } else {
+            let result = getStorySelectors()
+            _cachedStories = result
+            return result
+        }
     }
     
     private func getStorySelectors() -> [Selector] {

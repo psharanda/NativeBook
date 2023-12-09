@@ -5,11 +5,6 @@
 import UIKit
 
 class UITextFieldStorySet: StorySet {
-    
-    override var name: String {
-        return "UITextField"
-    }
-    
     @objc func story_BasicTextFieldWithPlaceholder() -> UIView {
         let textField = UITextField()
         textField.placeholder = "Placeholder"
