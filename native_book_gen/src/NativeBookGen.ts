@@ -4,10 +4,6 @@ import * as ejs from "ejs";
 const repoRoot = __dirname + "/../../";
 const siteDir = repoRoot + "native_book_site";
 
-interface Config {
-  components: { name: string; storySetFile: string; snapshotsFolder: string }[];
-}
-
 interface Story {
   name: string;
   codeSnippet: string;
@@ -16,7 +12,7 @@ interface Story {
 interface Component {
   name: string;
   stories: Story[];
-  snapshotsFolder: string;
+  snapshotsFolderPath: string;
 }
 
 function formatMultilineString(input: string): string {
@@ -47,7 +43,7 @@ function storiesFromFile(filePath: string): Story[] {
   const sourceCode = fs.readFileSync(repoRoot + filePath, "utf-8");
 
   const codeSnippetRegex =
-    /@objc\s+func\s+story_(?<name>[A-Za-z0-9_]+)\(\)\s*->\s*UIView\s*{(?<codeSnippet>[\s\S]*?)return/g;
+    /func\s+story_(?<name>[A-Za-z0-9_]+)\(\)\s*->\s*UIView\s*{(?<codeSnippet>[\s\S]*?)return/g;
 
   const result: Story[] = [];
   let match;
@@ -85,22 +81,22 @@ function renderComponent(component: Component) {
   );
 }
 
-(async function () {
+(function () {
   // load config
   const nativeBookConfigContents = fs.readFileSync(
     repoRoot + "native_book_config.json",
     "utf-8"
   );
 
-  const config = JSON.parse(nativeBookConfigContents) as Config;
+  const config = JSON.parse(nativeBookConfigContents);
 
   // gather information for a component
   const components: Component[] = [];
-  for (const componentJson of config.components) {
+  for (const componentJson of config["components"]) {
     components.push({
-      name: componentJson.name,
-      stories: storiesFromFile(componentJson.storySetFile),
-      snapshotsFolder: componentJson.snapshotsFolder,
+      name: componentJson["name"],
+      stories: storiesFromFile(componentJson["storiesFilePath"]),
+      snapshotsFolderPath: componentJson["snapshotsFolderPath"],
     });
   }
 

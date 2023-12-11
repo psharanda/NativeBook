@@ -4,8 +4,8 @@
 
 import UIKit
 
-class UIButtonStorySet: StorySet {
-    @objc func story_BasicButton() -> UIView {
+class UIButtonStories: DynamicComponentStories {
+    @objc static func story_BasicButton() -> UIView {
         let button = UIButton()
         var config = UIButton.Configuration.plain()
         config.title = "Basic"
@@ -13,7 +13,7 @@ class UIButtonStorySet: StorySet {
         return button
     }
 
-    @objc func story_RoundedCornerButton() -> UIView {
+    @objc static func story_RoundedCornerButton() -> UIView {
         let button = UIButton()
         var config = UIButton.Configuration.filled()
         config.title = "Rounded"
@@ -21,8 +21,8 @@ class UIButtonStorySet: StorySet {
         button.configuration = config
         return button
     }
-    
-    @objc func story_LightDarkRoundedCornerButton() -> UIView {
+
+    @objc static func story_LightDarkRoundedCornerButton() -> UIView {
         let button = UIButton()
         var config = UIButton.Configuration.filled()
         config.title = "Rounded"
@@ -33,7 +33,7 @@ class UIButtonStorySet: StorySet {
         return button
     }
 
-    @objc func story_IconButton() -> UIView {
+    @objc static func story_IconButton() -> UIView {
         let button = UIButton()
         var config = UIButton.Configuration.tinted()
         config.image = UIImage(systemName: "star")
@@ -43,7 +43,7 @@ class UIButtonStorySet: StorySet {
         return button
     }
 
-    @objc func story_OutlineButton() -> UIView {
+    @objc static func story_OutlineButton() -> UIView {
         let button = UIButton()
         var config = UIButton.Configuration.gray()
         config.title = "Outline"
@@ -53,7 +53,7 @@ class UIButtonStorySet: StorySet {
         return button
     }
 
-    @objc func story_ImageTitleButton() -> UIView {
+    @objc static func story_ImageTitleButton() -> UIView {
         let button = UIButton()
         var config = UIButton.Configuration.plain()
         config.title = "Image + Title"

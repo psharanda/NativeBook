@@ -4,8 +4,8 @@
 
 import UIKit
 
-class UITextFieldStorySet: StorySet {
-    @objc func story_BasicTextFieldWithPlaceholder() -> UIView {
+class UITextFieldStories: DynamicComponentStories {
+    @objc static func story_BasicTextFieldWithPlaceholder() -> UIView {
         let textField = UITextField()
         textField.placeholder = "Placeholder"
         textField.borderStyle = .roundedRect
@@ -13,8 +13,8 @@ class UITextFieldStorySet: StorySet {
         textField.widthAnchor.constraint(equalToConstant: 200).isActive = true
         return textField
     }
-    
-    @objc func story_BasicTextFieldWithText() -> UIView {
+
+    @objc static func story_BasicTextFieldWithText() -> UIView {
         let textField = UITextField()
         textField.text = "Text"
         textField.borderStyle = .roundedRect
@@ -22,8 +22,8 @@ class UITextFieldStorySet: StorySet {
         textField.widthAnchor.constraint(equalToConstant: 200).isActive = true
         return textField
     }
-    
-    @objc func story_DynamicTypeTextFieldWithPlaceholder() -> UIView {
+
+    @objc static func story_DynamicTypeTextFieldWithPlaceholder() -> UIView {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
         textField.placeholder = "Placeholder"
@@ -34,8 +34,8 @@ class UITextFieldStorySet: StorySet {
         textField.widthAnchor.constraint(equalToConstant: 200).isActive = true
         return textField
     }
-    
-    @objc func story_DynamicTypeBasicTextFieldWithText() -> UIView {
+
+    @objc static func story_DynamicTypeBasicTextFieldWithText() -> UIView {
         let textField = UITextField()
         textField.text = "Text"
         textField.borderStyle = .roundedRect

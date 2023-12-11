@@ -2,18 +2,18 @@
     "components": [
         {
             "name": "UILabel",
-            "storySetFile": "NativeBook/StorySets/UILabelStorySet.swift",
-            "snapshotsFolder": "Ref/ReferenceImages_64/NativeBookTests.UILabel_Tests"
+            "storiesFilePath": "NativeBook/StorySets/UILabelStories.swift",
+            "snapshotsFolderPath": "Ref/ReferenceImages_64/NativeBookTests.UILabelTests"
         },
         {
             "name": "UIButton",
-            "storySetFile": "NativeBook/StorySets/UIButtonStorySet.swift",
-            "snapshotsFolder": "Ref/ReferenceImages_64/NativeBookTests.UIButton_Tests"
+            "storiesFilePath": "NativeBook/StorySets/UIButtonStories.swift",
+            "snapshotsFolderPath": "Ref/ReferenceImages_64/NativeBookTests.UIButtonTests"
         },
         {
             "name": "UITextField",
-            "storySetFile": "NativeBook/StorySets/UITextFieldStorySet.swift",
-            "snapshotsFolder": "Ref/ReferenceImages_64/NativeBookTests.UITextField_Tests"
+            "storiesFilePath": "NativeBook/StorySets/UITextFieldStories.swift",
+            "snapshotsFolderPath": "Ref/ReferenceImages_64/NativeBookTests.UITextFieldTests"
         }
     ]
 }

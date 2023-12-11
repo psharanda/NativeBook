@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B30096D2B1C97A600EA8644 /* StorySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30096C2B1C97A600EA8644 /* StorySet.swift */; };
+		1B30096D2B1C97A600EA8644 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30096C2B1C97A600EA8644 /* Base.swift */; };
 		1B30096F2B1CA61400EA8644 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30096E2B1CA61400EA8644 /* StoryViewController.swift */; };
-		1B3009712B1CAF0600EA8644 /* UILabelStorySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3009702B1CAF0600EA8644 /* UILabelStorySet.swift */; };
-		1B3009752B1CB42C00EA8644 /* UIButtonStorySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3009742B1CB42C00EA8644 /* UIButtonStorySet.swift */; };
-		1B3009772B1D341300EA8644 /* UITextFieldStorySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3009762B1D341300EA8644 /* UITextFieldStorySet.swift */; };
+		1B3009712B1CAF0600EA8644 /* UILabelStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3009702B1CAF0600EA8644 /* UILabelStories.swift */; };
+		1B3009752B1CB42C00EA8644 /* UIButtonStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3009742B1CB42C00EA8644 /* UIButtonStories.swift */; };
+		1B3009772B1D341300EA8644 /* UITextFieldStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3009762B1D341300EA8644 /* UITextFieldStories.swift */; };
 		1BDD34892B1BC3A300B19632 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDD34882B1BC3A300B19632 /* AppDelegate.swift */; };
 		1BDD348B2B1BC3A300B19632 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDD348A2B1BC3A300B19632 /* SceneDelegate.swift */; };
-		1BDD348D2B1BC3A300B19632 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDD348C2B1BC3A300B19632 /* BookViewController.swift */; };
+		1BDD348D2B1BC3A300B19632 /* StorybookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDD348C2B1BC3A300B19632 /* StorybookViewController.swift */; };
 		1BDD34922B1BC3A500B19632 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BDD34912B1BC3A500B19632 /* Assets.xcassets */; };
 		1BDD34952B1BC3A500B19632 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BDD34932B1BC3A500B19632 /* LaunchScreen.storyboard */; };
 		1BDD34A02B1BC3A500B19632 /* NativeBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDD349F2B1BC3A500B19632 /* NativeBookTests.swift */; };
@@ -48,15 +48,15 @@
 
 /* Begin PBXFileReference section */
 		1B096F132B1C0C6600450122 /* NativeBook.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = NativeBook.xctestplan; sourceTree = "<group>"; };
-		1B30096C2B1C97A600EA8644 /* StorySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySet.swift; sourceTree = "<group>"; };
+		1B30096C2B1C97A600EA8644 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		1B30096E2B1CA61400EA8644 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
-		1B3009702B1CAF0600EA8644 /* UILabelStorySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelStorySet.swift; sourceTree = "<group>"; };
-		1B3009742B1CB42C00EA8644 /* UIButtonStorySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonStorySet.swift; sourceTree = "<group>"; };
-		1B3009762B1D341300EA8644 /* UITextFieldStorySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldStorySet.swift; sourceTree = "<group>"; };
+		1B3009702B1CAF0600EA8644 /* UILabelStories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelStories.swift; sourceTree = "<group>"; };
+		1B3009742B1CB42C00EA8644 /* UIButtonStories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonStories.swift; sourceTree = "<group>"; };
+		1B3009762B1D341300EA8644 /* UITextFieldStories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldStories.swift; sourceTree = "<group>"; };
 		1BDD34852B1BC3A300B19632 /* NativeBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BDD34882B1BC3A300B19632 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BDD348A2B1BC3A300B19632 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1BDD348C2B1BC3A300B19632 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		1BDD348C2B1BC3A300B19632 /* StorybookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorybookViewController.swift; sourceTree = "<group>"; };
 		1BDD34912B1BC3A500B19632 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BDD34942B1BC3A500B19632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BDD34962B1BC3A500B19632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,9 +86,9 @@
 		1B3009722B1CAF1F00EA8644 /* StorySets */ = {
 			isa = PBXGroup;
 			children = (
-				1B3009702B1CAF0600EA8644 /* UILabelStorySet.swift */,
-				1B3009742B1CB42C00EA8644 /* UIButtonStorySet.swift */,
-				1B3009762B1D341300EA8644 /* UITextFieldStorySet.swift */,
+				1B3009702B1CAF0600EA8644 /* UILabelStories.swift */,
+				1B3009742B1CB42C00EA8644 /* UIButtonStories.swift */,
+				1B3009762B1D341300EA8644 /* UITextFieldStories.swift */,
 			);
 			path = StorySets;
 			sourceTree = "<group>";
@@ -96,8 +96,8 @@
 		1B3009732B1CAFCA00EA8644 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				1B30096C2B1C97A600EA8644 /* StorySet.swift */,
-				1BDD348C2B1BC3A300B19632 /* BookViewController.swift */,
+				1B30096C2B1C97A600EA8644 /* Base.swift */,
+				1BDD348C2B1BC3A300B19632 /* StorybookViewController.swift */,
 				1B30096E2B1CA61400EA8644 /* StoryViewController.swift */,
 			);
 			path = Core;
@@ -261,13 +261,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B3009752B1CB42C00EA8644 /* UIButtonStorySet.swift in Sources */,
+				1B3009752B1CB42C00EA8644 /* UIButtonStories.swift in Sources */,
 				1B30096F2B1CA61400EA8644 /* StoryViewController.swift in Sources */,
-				1B3009712B1CAF0600EA8644 /* UILabelStorySet.swift in Sources */,
-				1B3009772B1D341300EA8644 /* UITextFieldStorySet.swift in Sources */,
-				1BDD348D2B1BC3A300B19632 /* BookViewController.swift in Sources */,
+				1B3009712B1CAF0600EA8644 /* UILabelStories.swift in Sources */,
+				1B3009772B1D341300EA8644 /* UITextFieldStories.swift in Sources */,
+				1BDD348D2B1BC3A300B19632 /* StorybookViewController.swift in Sources */,
 				1BDD34892B1BC3A300B19632 /* AppDelegate.swift in Sources */,
-				1B30096D2B1C97A600EA8644 /* StorySet.swift in Sources */,
+				1B30096D2B1C97A600EA8644 /* Base.swift in Sources */,
 				1BDD348B2B1BC3A300B19632 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
