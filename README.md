@@ -1,4 +1,7 @@
 # NativeBook
+## Intro
+
+Implementing, maintaining, documenting and evolving a shared set of UI components is not an easy thing in a large-scale application. Web developers have created a powerful solution for this process - Storybook.js. But what about native iOS development? Can we achieve a somewhat similar experience?
 
 What if we combine a catalog app, snapshot tests, and HTML-based documentation generation into a single system? 
 
