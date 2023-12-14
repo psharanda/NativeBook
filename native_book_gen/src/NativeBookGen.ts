@@ -110,6 +110,13 @@ function renderComponent(component: Component) {
   // render html site
   renderIndex(components);
   for (const component of components) {
+    fs.cpSync(
+      repoRoot + component.snapshotsFolderPath,
+      `${siteDir}/img/${component.name}`,
+      {
+        recursive: true,
+      }
+    );
     renderComponent(component);
   }
 })();
