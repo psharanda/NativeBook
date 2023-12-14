@@ -13,7 +13,7 @@ Imagine writing a code snippet just once, and then being able to do the followin
 
 This repo is a proof of the concept for a such a system!
 
-## Snippet
+## Snippets
 
 ```swift
 class UIButtonStories: DynamicComponentStories {
@@ -41,4 +41,6 @@ class UIButtonStories: DynamicComponentStories {
 <img width="640" src="https://github.com/psharanda/NativeBook/assets/2247256/344ca96c-f85e-43c3-9362-9639cf024035">
 
 ## Documentation
+Site: [https://github.com/psharanda/NativeBook](https://github.com/psharanda/NativeBook)
+
 <img width="640" src="https://github.com/psharanda/NativeBook/assets/2247256/99b78193-2ae4-4ac1-9228-6851efe50327">
