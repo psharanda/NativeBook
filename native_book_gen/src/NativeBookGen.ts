@@ -2,7 +2,7 @@ import * as fs from "fs";
 import * as ejs from "ejs";
 
 const repoRoot = __dirname + "/../../";
-const siteDir = repoRoot + "native_book_site";
+const siteDir = repoRoot + "docs";
 
 interface Story {
   name: string;
