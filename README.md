@@ -11,6 +11,8 @@ Imagine writing a code snippet just once, and then being able to do the followin
 - Run a snapshot test for a snippet
 - Display this code snippet and the resulting snapshot in a generated HTML-based documentation
 
+This repo is a proof of the concept for a such a system!
+
 ## Snippet
 
 ```swift
