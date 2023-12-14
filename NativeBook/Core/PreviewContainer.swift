@@ -7,12 +7,12 @@ struct PreviewContainer<T: UIView>: UIViewRepresentable {
     init(_ viewBuilder: @escaping () -> T) {
         view = viewBuilder()
     }
-    
-    func makeUIView(context: Context) -> T {
+
+    func makeUIView(context _: Context) -> T {
         return view
     }
-    
-    func updateUIView(_ view: T, context: Context) {
+
+    func updateUIView(_ view: T, context _: Context) {
         view.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         view.setContentHuggingPriority(.defaultHigh, for: .vertical)
     }

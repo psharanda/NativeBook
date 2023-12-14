@@ -21,17 +21,21 @@ class DynamicComponentStories: NSObject, ComponentStories {
             .replacingOccurrences(of: "Stories", with: "")
     }
 
-    lazy var stories: [Story] = {
+    private(set) lazy var stories: [Story] = {
         var methodCount: UInt32 = 0
 
         guard let methodList = class_copyMethodList(object_getClass(type(of: self)), &methodCount) else { return [] }
 
+        var uniqueSelectors = Set<String>()
         var selectors = [Selector]()
         for i in 0 ..< Int(methodCount) {
             let selector = method_getName(methodList[i])
             let name = NSStringFromSelector(selector)
             if name.starts(with: "story_") {
-                selectors.append(selector)
+                if !uniqueSelectors.contains(name) {
+                    uniqueSelectors.insert(name)
+                    selectors.append(selector)
+                }
             }
         }
         free(methodList)

@@ -2,6 +2,7 @@
 //  Created by Pavel Sharanda on 03/12/2023.
 //
 
+import SwiftUI
 import UIKit
 
 class UITextFieldStories: DynamicComponentStories {
@@ -44,5 +45,16 @@ class UITextFieldStories: DynamicComponentStories {
         textField.font = .preferredFont(forTextStyle: .body)
         textField.widthAnchor.constraint(equalToConstant: 200).isActive = true
         return textField
+    }
+}
+
+struct UITextField_Previews: PreviewProvider {
+    static var previews: some View {
+        ForEach(UITextFieldStories().stories, id: \.name) { story in
+            PreviewContainer {
+                story.makeView()!
+            }
+            .previewDisplayName(story.name)
+        }
     }
 }

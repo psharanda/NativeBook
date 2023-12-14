@@ -2,6 +2,7 @@
 //  Created by Pavel Sharanda on 03/12/2023.
 //
 
+import SwiftUI
 import UIKit
 
 class UIButtonStories: DynamicComponentStories {
@@ -62,5 +63,16 @@ class UIButtonStories: DynamicComponentStories {
         config.titlePadding = 10
         button.configuration = config
         return button
+    }
+}
+
+struct UIButton_Previews: PreviewProvider {
+    static var previews: some View {
+        ForEach(UIButtonStories().stories, id: \.name) { story in
+            PreviewContainer {
+                story.makeView()!
+            }
+            .previewDisplayName(story.name)
+        }
     }
 }

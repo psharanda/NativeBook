@@ -2,6 +2,7 @@
 //  Created by Pavel Sharanda on 03/12/2023.
 //
 
+import SwiftUI
 import UIKit
 
 class UILabelStories: DynamicComponentStories {
@@ -25,5 +26,16 @@ class UILabelStories: DynamicComponentStories {
         label.widthAnchor.constraint(equalToConstant: 120).isActive = true
 
         return label
+    }
+}
+
+struct UILabel_Previews: PreviewProvider {
+    static var previews: some View {
+        ForEach(UILabelStories().stories, id: \.name) { story in
+            PreviewContainer {
+                story.makeView()!
+            }
+            .previewDisplayName(story.name)
+        }
     }
 }
