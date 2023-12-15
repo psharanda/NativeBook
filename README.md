@@ -11,7 +11,7 @@ Imagine writing a code snippet just once, and then being able to do the followin
 - Run a snapshot test for a snippet
 - Display this code snippet and the resulting snapshot in a generated HTML-based documentation
 
-This repo is a proof of the concept for a such a system!
+This repo is a proof of the concept for such a system!
 
 ## Snippets
 
@@ -41,6 +41,6 @@ class UIButtonStories: DynamicComponentStories {
 <img width="640" src="https://github.com/psharanda/NativeBook/assets/2247256/344ca96c-f85e-43c3-9362-9639cf024035">
 
 ## Documentation
-Site: [https://github.com/psharanda/NativeBook](https://github.com/psharanda/NativeBook)
+Site: [https://psharanda.github.io/NativeBook](https://psharanda.github.io/NativeBook)
 
 <img width="640" src="https://github.com/psharanda/NativeBook/assets/2247256/99b78193-2ae4-4ac1-9228-6851efe50327">
