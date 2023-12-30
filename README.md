@@ -13,7 +13,10 @@ Imagine writing a code snippet just once, and then being able to do the followin
 
 This repo is a proof of the concept for such a system!
 
-## Snippets
+Check my article about NativeBook for more details:
+https://hackernoon.com/nativebook-unifying-the-native-ios-development-experience-with-storybookjs
+
+## Snippet
 
 ```swift
 class UIButtonStories: DynamicComponentStories {
