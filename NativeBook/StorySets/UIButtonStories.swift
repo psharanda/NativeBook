@@ -46,6 +46,7 @@ class UIButtonStories: DynamicComponentStories {
 
     @objc static func story_OutlineButton() -> UIView {
         let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
         var config = UIButton.Configuration.gray()
         config.title = "Outline"
         config.baseForegroundColor = .blue
@@ -56,6 +57,7 @@ class UIButtonStories: DynamicComponentStories {
 
     @objc static func story_ImageTitleButton() -> UIView {
         let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
         var config = UIButton.Configuration.plain()
         config.title = "Image + Title"
         config.image = UIImage(systemName: "bell")
@@ -68,11 +70,6 @@ class UIButtonStories: DynamicComponentStories {
 
 struct UIButton_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(UIButtonStories().stories, id: \.name) { story in
-            PreviewContainer {
-                story.makeView()!
-            }
-            .previewDisplayName(story.name)
-        }
+        UIButtonStories().swiftUIPreviews
     }
 }

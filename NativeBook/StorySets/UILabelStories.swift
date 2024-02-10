@@ -31,11 +31,6 @@ class UILabelStories: DynamicComponentStories {
 
 struct UILabel_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(UILabelStories().stories, id: \.name) { story in
-            PreviewContainer {
-                story.makeView()!
-            }
-            .previewDisplayName(story.name)
-        }
+        UILabelStories().swiftUIPreviews
     }
 }

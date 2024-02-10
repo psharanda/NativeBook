@@ -12,7 +12,7 @@
 		1B3009712B1CAF0600EA8644 /* UILabelStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3009702B1CAF0600EA8644 /* UILabelStories.swift */; };
 		1B3009752B1CB42C00EA8644 /* UIButtonStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3009742B1CB42C00EA8644 /* UIButtonStories.swift */; };
 		1B3009772B1D341300EA8644 /* UITextFieldStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3009762B1D341300EA8644 /* UITextFieldStories.swift */; };
-		1B9DA8AA2B2B3917005E256A /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9DA8A92B2B3917005E256A /* PreviewContainer.swift */; };
+		1B82DF1D2B781198007EB815 /* SwiftUIKitView in Frameworks */ = {isa = PBXBuildFile; productRef = 1B82DF1C2B781198007EB815 /* SwiftUIKitView */; };
 		1BDD34892B1BC3A300B19632 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDD34882B1BC3A300B19632 /* AppDelegate.swift */; };
 		1BDD348B2B1BC3A300B19632 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDD348A2B1BC3A300B19632 /* SceneDelegate.swift */; };
 		1BDD348D2B1BC3A300B19632 /* StorybookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDD348C2B1BC3A300B19632 /* StorybookViewController.swift */; };
@@ -54,7 +54,6 @@
 		1B3009702B1CAF0600EA8644 /* UILabelStories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelStories.swift; sourceTree = "<group>"; };
 		1B3009742B1CB42C00EA8644 /* UIButtonStories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonStories.swift; sourceTree = "<group>"; };
 		1B3009762B1D341300EA8644 /* UITextFieldStories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldStories.swift; sourceTree = "<group>"; };
-		1B9DA8A92B2B3917005E256A /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 		1BDD34852B1BC3A300B19632 /* NativeBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BDD34882B1BC3A300B19632 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BDD348A2B1BC3A300B19632 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B82DF1D2B781198007EB815 /* SwiftUIKitView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +101,6 @@
 				1B30096C2B1C97A600EA8644 /* Base.swift */,
 				1BDD348C2B1BC3A300B19632 /* StorybookViewController.swift */,
 				1B30096E2B1CA61400EA8644 /* StoryViewController.swift */,
-				1B9DA8A92B2B3917005E256A /* PreviewContainer.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -172,6 +171,7 @@
 			);
 			name = NativeBook;
 			packageProductDependencies = (
+				1B82DF1C2B781198007EB815 /* SwiftUIKitView */,
 			);
 			productName = NativeBook;
 			productReference = 1BDD34852B1BC3A300B19632 /* NativeBook.app */;
@@ -229,6 +229,7 @@
 			mainGroup = 1BDD347C2B1BC3A300B19632;
 			packageReferences = (
 				1BDD34B82B1BC49200B19632 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */,
+				1B82DF1B2B781198007EB815 /* XCRemoteSwiftPackageReference "SwiftUIKitView" */,
 			);
 			productRefGroup = 1BDD34862B1BC3A300B19632 /* Products */;
 			projectDirPath = "";
@@ -268,7 +269,6 @@
 				1B30096F2B1CA61400EA8644 /* StoryViewController.swift in Sources */,
 				1B3009712B1CAF0600EA8644 /* UILabelStories.swift in Sources */,
 				1B3009772B1D341300EA8644 /* UITextFieldStories.swift in Sources */,
-				1B9DA8AA2B2B3917005E256A /* PreviewContainer.swift in Sources */,
 				1BDD348D2B1BC3A300B19632 /* StorybookViewController.swift in Sources */,
 				1BDD34892B1BC3A300B19632 /* AppDelegate.swift in Sources */,
 				1B30096D2B1C97A600EA8644 /* Base.swift in Sources */,
@@ -439,7 +439,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,7 +467,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -554,6 +554,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1B82DF1B2B781198007EB815 /* XCRemoteSwiftPackageReference "SwiftUIKitView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AvdLee/SwiftUIKitView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		1BDD34B82B1BC49200B19632 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/uber/ios-snapshot-test-case";
@@ -565,6 +573,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1B82DF1C2B781198007EB815 /* SwiftUIKitView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B82DF1B2B781198007EB815 /* XCRemoteSwiftPackageReference "SwiftUIKitView" */;
+			productName = SwiftUIKitView;
+		};
 		1BDD34C42B1BC51A00B19632 /* iOSSnapshotTestCase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1BDD34B82B1BC49200B19632 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */;

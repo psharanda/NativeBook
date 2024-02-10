@@ -23,13 +23,8 @@ class StoryViewController: UIViewController {
 
         view.backgroundColor = .secondarySystemBackground
 
-        guard let storyView = story.makeView() else {
-            return
-        }
-
+        let storyView = story.makeView()
         view.addSubview(storyView)
-
-        storyView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
             storyView.centerXAnchor.constraint(equalTo: view.centerXAnchor),

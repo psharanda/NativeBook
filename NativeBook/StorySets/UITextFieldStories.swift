@@ -50,11 +50,6 @@ class UITextFieldStories: DynamicComponentStories {
 
 struct UITextField_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(UITextFieldStories().stories, id: \.name) { story in
-            PreviewContainer {
-                story.makeView()!
-            }
-            .previewDisplayName(story.name)
-        }
+        UITextFieldStories().swiftUIPreviews
     }
 }

@@ -14,9 +14,7 @@ class NativeBookSnapshotTestCase: FBSnapshotTestCase {
 
     func runTests(for componentStories: ComponentStories) {
         for story in componentStories.stories {
-            if let view = story.makeView() {
-                NativeBookVerifyView(view, storyName: story.name)
-            }
+            NativeBookVerifyView(story.makeView(), storyName: story.name)
         }
     }
 
@@ -24,8 +22,6 @@ class NativeBookSnapshotTestCase: FBSnapshotTestCase {
         let window = UIApplication.shared.connectedScenes
             .compactMap { ($0 as? UIWindowScene)?.keyWindow }.last!
         window.addSubview(view)
-
-        view.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
             view.centerXAnchor.constraint(equalTo: window.centerXAnchor),
